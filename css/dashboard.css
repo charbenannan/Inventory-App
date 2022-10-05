@@ -12,7 +12,7 @@ body{
     margin-left:-8px;
     margin-top:-8px;
     margin-bottom:-8px;
-    
+       
 }
 .sidebar img{
     width: 120px;
@@ -239,4 +239,19 @@ table th{
 }
 table td{
     font-size:14px;
+}
+a{
+    text-decoration:none;
+    color:#5583d7;
+   }
+a:hover{
+    text-decoration: underline;
+    transition: 0.6s ease-in all;
+    color:#1d4288;
+}
+.this-table{
+    margin-left: -10px;
+}
+.hide{
+    display:none;
 }

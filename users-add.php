@@ -119,8 +119,8 @@
                             <td><?= date('d M,Y @12:i:s A', strtotime($user['created_at']))?></td>
                             <td><?=date('d M,Y @12:i:s A', strtotime($user['updated_at']))?></td>
                             <td>
-                                <p><a href="" ><i class="fa fa-pencil"></i> Edit</a></p>
-                                <p> <a href="" class="deleteUser" data-userid="<?=$user['id']?>" data-fname="<?=$user['first_name']?>" data-lname="<?=$user['last_name']?>"><i class="fa fa-trash"></i> Delete</a></p>
+                                <p><a href="" >Edit <i class="fa fa-pencil"></i> </a></p>
+                                <p> <a href="" class="deleteUser" data-userid="<?=$user['id']?>" data-fname="<?=$user['first_name']?>" data-lname="<?=$user['last_name']?>">Delete <i class="fa fa-trash"></i> </a></p>
                             </td>
                         </tr>
                         <?php } ?>
@@ -140,7 +140,7 @@
                     </div>
  
 <script type="text/javascript" src="js/script.js"></script>
-<script src="js/jquery/jquery-3.6.1.js"></script>
+
 <script>
     document.getElementById("addBtn").addEventListener('click', function(){
     document.querySelector(".userForm").style.display = "block";
