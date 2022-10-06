@@ -20,7 +20,7 @@ var sideBarIsOpen = true;
     sideBarIsOpen = false;
     } else{
         sidebar.style.width = '16.5%';
-        dash.style.width ='80%';
+        dash.style.width ='100%';
         username.style.display = 'inline-block';
         userImage.style.width = '115px';
 

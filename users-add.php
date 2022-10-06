@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -30,21 +30,7 @@
                 <div class="main-content">
 
                 <div class="row">
-        <div class="col-md-4">
-            <div class="card mb-5">
-                <div class="card-body">
-                    <h3>Log-in as another user</h3>
-					<form class="form" method="POST" action="/admin/login-as/">
-						<div class="input-group">
-							<input class="form-control" type="email" name="user_email" placeholder="Registered E-mail" autocomplete="0">
-							<div class="input-group-btn">
-								<input class="btn btn-primary" type="submit" value="Log-in">
-							</div>
-						</div>
-					</form>
-                </div>
-            </div>
-        </div>
+      
     </div>
 
 

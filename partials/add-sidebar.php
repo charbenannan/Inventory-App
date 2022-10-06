@@ -19,11 +19,11 @@
     </li>
 
     <li class="btns" style="font-size:14px;">
-        <a href="" ><i class="fa fa-money" ></i> <span class="menuText "> Account Documents</span></a>
+        <a href="./account.php" ><i class="fa fa-money" ></i> <span class="menuText "> Account Documents</span></a>
     </li>
 
     <li class="btns">
-        <a href="" ><i class="fa fa-shield" ></i> <span class="menuText">Security Escort</span></a>
+        <a href="./security.php" ><i class="fa fa-shield" ></i> <span class="menuText">Security Escort</span></a>
     </li>
 
     <li class="btns">
