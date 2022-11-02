@@ -154,6 +154,7 @@
 </div>
  
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/active.js"></script>
 <script src="js/jquery/jquery-3.6.1.js"></script>
 <script>
 function addDel(){

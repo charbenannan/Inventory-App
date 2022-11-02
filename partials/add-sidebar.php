@@ -9,26 +9,43 @@
 
          
 <div class="menu" id="myMenu">
-<ul class="menu-list">
-    <li class=" btns menuActive" >
-        <a href="" ><i class="fa fa-dashboard menuActive" ></i> <span class="menuText menuActive">Dashboard</span></a>
-   </li>
+<ul class="menu-list" id="sideMenu">
 
-    <li class="btns">
+    <div class="btns menuActive">
+    <li class="" >
+        <a href="./dashboard.php" ><i class="fa fa-dashboard" ></i> <span class="menuText">Dashboard</span></a>
+   </li>
+</div>
+
+    <div class="btns ">
+         <li class="">
         <a href="./marpol.php" ><i class="fa fa-ship" ></i> <span class="menuText ">Marpol Documents</span></a>
     </li>
+</div>
 
-    <li class="btns" style="font-size:14px;">
+<div class="btns ">
+    <li class="" style="font-size:14px;">
         <a href="./account.php" ><i class="fa fa-money" ></i> <span class="menuText "> Account Documents</span></a>
     </li>
+    </div>
 
-    <li class="btns">
+    <div class="btns ">
+    <li class="">
         <a href="./security.php" ><i class="fa fa-shield" ></i> <span class="menuText">Security Escort</span></a>
     </li>
+    </div>
+    <?php if($_SESSION['user']['is_admin']==1){  ?>
+  <div class="btns ">
+    <li class= "">
+         <a href="./users-add.php" ><i class="fa fa-user" ></i> <span class="menuText" >Users</span></a>
+  </li>
+  </div>
+  <?php }?>
+    <!-- include users for admin -->
+  
+   
 
-    <li class="btns">
-        <a href="./users-add.php" ><i class="fa fa-user" ></i> <span class="menuText">Users</span></a>
-    </li>
+   
 </ul>
 </div>
 </div> 

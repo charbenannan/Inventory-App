@@ -11,7 +11,7 @@ var_dump($file);
 
 
 if(!empty($fileName) && file_exists($file)){
-header("Content-type:application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+header("Content-type:application/msword");
 header("Content-Description: inline; filename=$file");
 header("Content-Transfer-Encoding:binary");
 header("Accept-Ranges:bytes");

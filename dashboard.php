@@ -1,6 +1,7 @@
 <?php
     session_start();
     $user = ($_SESSION['user']);
+    
 
 ?>
 
@@ -29,5 +30,16 @@
 </div>
  
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/active.js"></script>
+<script type="text/javascript">
+    function checkIsAdmin(){
+        var x = document.getElementById("hide");
+       
+       const isAdmin = fetch('js/json.php') .then(res => res.json());
+       if(isAdmin('is_admin' !=1)){
+        x.classList.add("hide");
+       }
+    }
+</script>
 </body>
 </html>

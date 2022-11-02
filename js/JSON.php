@@ -1,6 +1,6 @@
     <?php
     $connection = mysqli_connect('localhost', 'root', '', 'pe_solutions');
-    $sql = "SELECT * FROM marpol_docs";
+    $sql = "SELECT * FROM users";
 
     $result = mysqli_query($connection, $sql);
 

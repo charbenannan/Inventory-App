@@ -5,6 +5,7 @@ $first_name =  $data['f_name'];
 $last_name = $data['l_name'];
 
 
+
 try{
     $cmd = "DELETE FROM users WHERE id={$user_id}";
     

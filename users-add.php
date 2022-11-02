@@ -64,6 +64,14 @@
                             <label for="password">Password:</label>
                             <input type="password" id="password" name="password" class="appFormInput" />
                         </div>
+                        <div class="appFormInputContainer">
+                            <label for="admin">Account Type</label>
+                            <select name="is_admin" class="appFormInput">
+                                <option value="1">Admin</option>
+                                <option value="0" selected>User</option>
+                            </select>
+                            
+                        </div>
                        <button class="appBtn" type="submit"><i class="fa fa-plus"></i> Add User</button>
                     </form>
                     <?php if(isset($_SESSION['response'])) { 
@@ -106,7 +114,7 @@
                             <td><?=date('d M,Y @12:i:s A', strtotime($user['updated_at']))?></td>
                             <td>
                                 <p><a href="" >Edit <i class="fa fa-pencil"></i> </a></p>
-                                <p> <a href="" class="deleteUser" data-userid="<?=$user['id']?>" data-fname="<?=$user['first_name']?>" data-lname="<?=$user['last_name']?>">Delete <i class="fa fa-trash"></i> </a></p>
+                                <p> <a href="" class="deleteUser" data-userid="<?=$user['id']?>" data-fname="<?=$user['first_name']?>" data-lname="<?=$user['last_name']?>" data-isAdmin="<?=$user['is_admin']?>">Delete <i class="fa fa-trash"></i> </a></p>
                             </td>
                         </tr>
                         <?php } ?>
@@ -126,7 +134,8 @@
                     </div>
  
 <script type="text/javascript" src="js/script.js"></script>
-
+<script type="text/javascript" src="js/active.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     document.getElementById("addBtn").addEventListener('click', function(){
     document.querySelector(".userForm").style.display = "block";
@@ -154,6 +163,7 @@
                     fname = targetElement.dataset.fname;
                     lname = targetElement.dataset.lname;
                     
+                    
                     if(window.confirm('Are you sure you want to delete '+ fname + ' '+ lname +' from the system?')){
                         $.ajax({
                             method: 'POST',
@@ -161,6 +171,7 @@
                                 user_id: userId,
                                 f_name: fname,
                                 l_name: lname
+                              
                             },
                             url: 'database/delete-user.php',
                             dataType: 'json',

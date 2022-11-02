@@ -1,5 +1,5 @@
 body{
-    scroll-behavior: no-scroll;
+    overflow-x: hidden;
 }
 #container{
     display: flex;
@@ -71,6 +71,9 @@ body{
     background: #fff;
     color:rgba(255, 24, 24, 0.649);
 }
+.menuActive li a{
+    color: rgba(255, 24, 24, 0.649);
+}
 .menu-list li a:hover{
     background: #fff;
     color:rgba(255, 24, 24, 0.649);
@@ -133,7 +136,7 @@ body{
     border-color:#6F86c6;
 }
  .appForm{
-    width:50%;
+    width:30%;
     margin: 0 auto;
     padding:10px;
     border: 1px solid #cecfd0;

@@ -97,7 +97,6 @@
                                      ?>
 
                     <tr>
-                        
                         <td><?=$i++;?></td>
                         <td><?=$rows['name']?></td>
                         <td>
@@ -105,10 +104,10 @@
                             <a href="database/download-sec.php?file=<?php echo $rows ['name']?>">Download <i class="fa fa-download"></i></a>
                             
                         </td>
-                        <td>
+                        <!-- <td>
+                            <a href="database/preview-sec.php?file=<?php echo $rows ['name']?>" target="_blank"><i class="fa fa-eye"></i> Preview</a>  
                             
-                            <a href="database/preview-sec.php?file=<?php echo $rows ['name']?>" target="_blank"><i class="fa fa-eye"></i> Preview</a>
-                        </td>
+                        </td> -->
                         <td>
                             <a href="" class="deleteDoc" data-id="<?=$rows['id']?>" data-name="<?=$rows['name']?>">Delete <i class="fa fa-trash"></i></a>
                             
@@ -155,6 +154,7 @@
 </div>
  
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/active.js"></script>
 <script src="js/jquery/jquery-3.6.1.js"></script>
 <script>
 function addDel(){

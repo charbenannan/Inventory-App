@@ -4,11 +4,12 @@ $error_message = '';
 
     if($_POST){
         include('database/connection.php');
+        
 
         $username = $_POST['username'];
         $password = $_POST['password'];
-
-        $query = 'SELECT * FROM users WHERE users.email="'. $username.'" AND users.password="'. $password . '"';  
+        
+        $query = 'SELECT * FROM users WHERE users.email="'. $username.'" AND users.password="'.$password . '"';  
         $stmt = $conn->prepare($query);
         $stmt->execute();
 
