@@ -4,28 +4,38 @@ $error_message = '';
 
     if($_POST){
         include('database/connection.php');
+
+        
         
 
         $username = $_POST['username'];
         $password = $_POST['password'];
-        
-        $query = 'SELECT * FROM users WHERE users.email="'. $username.'" AND users.password="'.$password . '"';  
-        $stmt = $conn->prepare($query);
-        $stmt->execute();
 
-        
+         
+         $query = 'SELECT * FROM users WHERE users.email="'.$username.'" AND users.password="'.$password.'"';  
+         $stmt = $conn->prepare($query);
+         $stmt->execute();
+
+      var_dump($query);
+       
         if($stmt->rowCount() > 0){
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $user = $stmt->fetchAll()[0];
+            var_dump($user);
             $_SESSION['user'] = $user;
-
+            
             header('Location:dashboard.php');
-
+        
         }else $error_message = 'Username or Password incorrect.';
 
 
 
+
+
     }
+
+   
+
 ?>
 
 <!DOCTYPE html>

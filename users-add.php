@@ -96,6 +96,7 @@
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Email</th>
+                                    <th>User Type</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
                                     <th>Actions</th>
@@ -103,8 +104,13 @@
                     </thead>
                     <tbody>
                         <?php
+                        //   if($user['is_admin']=0){
+                        //     echo 'User';
+                        // }else{
+                        //     echo 'Admin';
+                        // }
                         foreach($users as $index => $user) { ?>
-                        
+                      
                         <tr>
                             <td><?=$index + 1?></td>
                             <td><?=$user['first_name']?></td>

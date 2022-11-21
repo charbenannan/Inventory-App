@@ -3,7 +3,8 @@
     $username = 'root';
     $password = '';
 
-
+   
+    
     //Connecting to database//Routing the connection
     try{
         $conn = new PDO("mysql:host=$servername;dbname=pe_solutions", $username, $password);

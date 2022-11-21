@@ -89,7 +89,7 @@
                     <tbody>
                     <?php
                             $connection = mysqli_connect('localhost', 'root', '', 'pe_solutions');
-                            $queryThis = "SELECT * FROM account_docs";
+                            $queryThis = "SELECT * FROM account_docs WHERE user_id='".$_SESSION['user']['id']."'";
                             $runThis = mysqli_query($connection,$queryThis);    
                             $i = 1;               
                             while($rows = mysqli_fetch_assoc($runThis)){

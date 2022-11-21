@@ -3,6 +3,7 @@
     $user = ($_SESSION['user']);
     include('database/upload.php');
 
+
    
 
 ?>
@@ -26,48 +27,11 @@
             <?php include('partials/app-topnav.php') ?>
             
          <div class="content">
-<!-- <div class="search-wrapper">
-        <label for="search">Search</label>
-        <input type="search"  id="search" data-search>
-        
-        </div> -->
-       
 
-        
-        <!-- // if(isset($_POST['submit'])){
-        //     $string = $_POST['search'];
-        //     $state = $conn->prepare ("SELECT * FROM `marpol_docs` WHERE name `$string`");
-
-        //     $state->setFetchMode(PDO:: FETCH_OBJ);
-        //     $state->execute();
-        //     if($rows = $sth->fetch()){
-        //         ?> -->
-        <!-- //         <br><br><br>
-        //         <table>
-        //             <tr>
-        //                 <th>No</th>
-        //                 <th>Name</th>
-        //                 <th></th>
-        //                 <th></th>
-        //                 <th></th>
-        //             </tr>
-        //             <tr>
-        //                 <td><?php echo $rows->No;?></td>
-        //                 <td><?php echo $rows->Name;?></td>
-        //             </tr>
-        //         </table> -->
-        <!-- //         
-        //     }
-        
-        //     else{
-        //         echo "The File Does Not Exist!";
-        //     }
-        // }
-    
-        //  -->
 
 
             <form action="database/upload.php" method="POST" enctype="multipart/form-data">
+              
             <input type="file" name="file" accept=".pdf" value="Upload">
             <button type="submit" class="btn-upload" name="submit"><i class="fa fa-upload"> Upload</i></button>
         </form>
@@ -75,6 +39,9 @@
         <div class="main-content">
 <div class="column column-8">
                 <form action="database/upload.php" method="POST" enctype="multipart/form-data">
+                
+                    
+              
                 <table class="this-table">
                     <thead>
                       <tr>
@@ -88,11 +55,14 @@
                     </thead>
                     <tbody>
                     <?php
+                        
                             $connection = mysqli_connect('localhost', 'root', '', 'pe_solutions');
-                            $queryThis = "SELECT * FROM marpol_docs";
+                            $queryThis = "SELECT * FROM marpol_docs WHERE user_id='".$_SESSION['user']['id']."'";
                             $runThis = mysqli_query($connection,$queryThis);    
                             $i = 1;               
+                                
                             while($rows = mysqli_fetch_assoc($runThis)){
+                                
                                
                                      ?>
 
@@ -120,34 +90,6 @@
                 </table>
 </form>
 
-<!-- <div class="column column-8" data-name-cards-container>
-<template data-name-template>
-    <div class="hide">
-        <table class="this-table">
-        <thead class="header">
-            <tr> 
-                <th data-header[id] >No.</th>
-                <th>Name</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            
-            </tr>
-                        </thead>
-        <tbody class="body" data-body>
-            <tr>
-                <td data-body></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
-</template>
-            </div> -->
                         </div>
         </div>
     </div>

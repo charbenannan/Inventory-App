@@ -1,6 +1,9 @@
 <?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 include('connection.php');
-
 
  if(isset($_POST['submit'])){
      $fileName = $_FILES['file']['name'];
@@ -8,7 +11,7 @@ include('connection.php');
      $path = "../files/marpol/".$fileName;
      
 
-     $query = "INSERT INTO marpol_docs(name) VALUES ('$fileName')";
+     $query = "INSERT INTO marpol_docs( user_id, name, created_at) VALUES ('".$_SESSION['user']['id']."','$fileName',  NOW())";
      $run = $conn->exec($query);
 
      if($run){

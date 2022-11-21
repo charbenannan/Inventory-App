@@ -26,45 +26,7 @@
             <?php include('partials/app-topnav.php') ?>
             
          <div class="content">
-<!-- <div class="search-wrapper">
-        <label for="search">Search</label>
-        <input type="search"  id="search" data-search>
-        
-        </div> -->
-       
 
-        
-        <!-- // if(isset($_POST['submit'])){
-        //     $string = $_POST['search'];
-        //     $state = $conn->prepare ("SELECT * FROM `security_docs` WHERE name `$string`");
-
-        //     $state->setFetchMode(PDO:: FETCH_OBJ);
-        //     $state->execute();
-        //     if($rows = $sth->fetch()){
-        //         ?> -->
-        <!-- //         <br><br><br>
-        //         <table>
-        //             <tr>
-        //                 <th>No</th>
-        //                 <th>Name</th>
-        //                 <th></th>
-        //                 <th></th>
-        //                 <th></th>
-        //             </tr>
-        //             <tr>
-        //                 <td><?php echo $rows->No;?></td>
-        //                 <td><?php echo $rows->Name;?></td>
-        //             </tr>
-        //         </table> -->
-        <!-- //         
-        //     }
-        
-        //     else{
-        //         echo "The File Does Not Exist!";
-        //     }
-        // }
-    
-        //  -->
 
 
             <form action="database/upload-sec.php" method="POST" enctype="multipart/form-data">
@@ -89,7 +51,7 @@
                     <tbody>
                     <?php
                             $connection = mysqli_connect('localhost', 'root', '', 'pe_solutions');
-                            $queryThis = "SELECT * FROM security_docs";
+                            $queryThis = "SELECT * FROM security_docs WHERE user_id='".$_SESSION['user']['id']."'";
                             $runThis = mysqli_query($connection,$queryThis);    
                             $i = 1;               
                             while($rows = mysqli_fetch_assoc($runThis)){
