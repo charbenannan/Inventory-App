@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | PE Solutions</title>
+    <title>Account | PE Solutions</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="shortcut icon" href="images/favicon.jpeg" type="image/x-icon" sizes="32x32">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" sizes="32x32">
     <script src="https://use.fontawesome.com/0c7a3095b5.js"></script>
     <script src="js/search.js" defer></script>
     </head>
@@ -26,45 +26,6 @@
             <?php include('partials/app-topnav.php') ?>
             
          <div class="content">
-<!-- <div class="search-wrapper">
-        <label for="search">Search</label>
-        <input type="search"  id="search" data-search>
-        
-        </div> -->
-       
-
-        
-        <!-- // if(isset($_POST['submit'])){
-        //     $string = $_POST['search'];
-        //     $state = $conn->prepare ("SELECT * FROM `account_docs` WHERE name `$string`");
-
-        //     $state->setFetchMode(PDO:: FETCH_OBJ);
-        //     $state->execute();
-        //     if($rows = $sth->fetch()){
-        //         ?> -->
-        <!-- //         <br><br><br>
-        //         <table>
-        //             <tr>
-        //                 <th>No</th>
-        //                 <th>Name</th>
-        //                 <th></th>
-        //                 <th></th>
-        //                 <th></th>
-        //             </tr>
-        //             <tr>
-        //                 <td><?php echo $rows->No;?></td>
-        //                 <td><?php echo $rows->Name;?></td>
-        //             </tr>
-        //         </table> -->
-        <!-- //         
-        //     }
-        
-        //     else{
-        //         echo "The File Does Not Exist!";
-        //     }
-        // }
-    
-        //  -->
 
 
             <form action="database/upload-acc.php" method="POST" enctype="multipart/form-data">
@@ -120,34 +81,7 @@
                 </table>
 </form>
 
-<!-- <div class="column column-8" data-name-cards-container>
-<template data-name-template>
-    <div class="hide">
-        <table class="this-table">
-        <thead class="header">
-            <tr> 
-                <th data-header[id] >No.</th>
-                <th>Name</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            
-            </tr>
-                        </thead>
-        <tbody class="body" data-body>
-            <tr>
-                <td data-body></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
-</template>
-            </div> -->
+
                         </div>
         </div>
     </div>

@@ -14,9 +14,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Dashboard | PE Solutions</title>
+    <title>Users | PE Solutions</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="shortcut icon" href="images/favicon.jpeg" type="image/x-icon" sizes="32x32">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" sizes="32x32">
     <script src="https://use.fontawesome.com/0c7a3095b5.js"></script>
     </head>
 <body>
@@ -96,7 +96,6 @@
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Email</th>
-                                    <th>User Type</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
                                     <th>Actions</th>
@@ -104,11 +103,8 @@
                     </thead>
                     <tbody>
                         <?php
-                        //   if($user['is_admin']=0){
-                        //     echo 'User';
-                        // }else{
-                        //     echo 'Admin';
-                        // }
+                      
+                      
                         foreach($users as $index => $user) { ?>
                       
                         <tr>

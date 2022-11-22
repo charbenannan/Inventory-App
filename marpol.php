@@ -14,9 +14,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | PE Solutions</title>
+    <title>Marpol | PE Solutions</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="shortcut icon" href="images/favicon.jpeg" type="image/x-icon" sizes="32x32">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" sizes="32x32">
     <script src="https://use.fontawesome.com/0c7a3095b5.js"></script>
     <script src="js/search.js" defer></script>
     </head>
