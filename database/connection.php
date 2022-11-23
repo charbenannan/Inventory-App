@@ -1,7 +1,7 @@
 <?php
-    $servername = 'localhost';
-    $username = 'root';
-    $password = '';
+    $servername = 'epiz_33055774';
+    $username = 'epiz_33055774_pesolutions';
+    $password = 'TrSaUX2Sv2qu';
 
    
     
